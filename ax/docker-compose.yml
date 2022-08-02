@@ -7,6 +7,8 @@ services:
     volumes:
         - ./nginx:/etc/nginx/conf.d
         - ./logs/nginx:/var/log/nginx
+        - ./requirements/tools:/etc/ssl/certs/
+        - ./requirements/key:/etc/ssl/private/
         - ./wordpress:/var/www/html
     links:
         - wordpress
